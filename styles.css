@@ -1,0 +1,129 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a, #ec4899);
+  color: #e2e8f0;
+}
+
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(15, 23, 42, 0.9);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: #f472b6;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* GRID LAYOUT */
+.page-wrapper {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 1.5rem;
+}
+
+/* RESPONSIVE IMAGES */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+figure img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* SIDEBAR */
+aside {
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* MAIN */
+main {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* HOBBIES */
+#hobbies ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+#hobbies li {
+  background: #ec4899;
+  padding: 6px 12px;
+  border-radius: 50px;
+}
+
+/* PROJECT GRID */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border: 1px solid #ec4899;
+}
+
+/* DESCRIPTION LIST */
+dt {
+  color: #f472b6;
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .page-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+}
